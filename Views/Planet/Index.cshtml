@@ -1,0 +1,11 @@
+@inject AppMvc.Net.Service.PlanetService PlanetService
+<h1>Cac hanh tinh trong he mat troi</h1>
+
+<div class="list-group">
+    @foreach (var planet in PlanetService)
+    {
+        <a class="list-group-item list-group-item-action" asp-controller="Planet" asp-action="@planet.Name">
+            @planet.VnName - @planet.Name
+        </a>
+    }
+</div>
